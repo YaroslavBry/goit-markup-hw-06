@@ -974,10 +974,8 @@ img {
 }
 
 .form-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row-reverse;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 30px;
   margin-top: 20px;
 }
@@ -997,22 +995,22 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.check-icon {
-  margin-right: 8px;
+/* ------------BEFORE----------- */
+.label::before {
+  content: "";
   width: 16px;
   height: 15px;
   border: 2px solid var(--primaty-text-color);
   border-radius: 2px;
+  margin-right: 8px;
 }
 
-.checkbox {
-  appearance: none;
-}
-
-.checkbox:checked + .check-icon {
+.checkbox:checked + .label::before {
   background-color: var(--accent-color);
   border: none;
   background-image: url(../images/icon-check.svg);
@@ -1054,11 +1052,9 @@ img {
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
-  /* margin-left: 15px; */
 }
 
 .footer-form {
-  /* outline: 1px dotted green; */
   margin-left: 93px;
 }
 

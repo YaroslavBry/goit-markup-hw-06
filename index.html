@@ -488,20 +488,19 @@
       <div class="form-field comment">
         <label for="comments" class="form-label">Комментарий</label>
          <textarea name="comments" id="comments" rows="10" placeholder="Введите текст" class="form-comments"></textarea> 
-
       </div>
-      
 
       <div class="form-footer">
-        
-        <label for="privacy" class="label">Соглашаюсь с рассылкой и принимаю 
+        <input type="checkbox" name="privacy" id="privacy" class="checkbox visually-hidden" >
+        <label for="privacy" class="label">
+          <!-- <span>
+            <svg class="form-icon" width="16" height="15">
+          <use href="./images/icons.svg#icon-check"></use>
+        </svg>
+          </span>  -->
+          Соглашаюсь с рассылкой и принимаю 
         <a href="" class="label-link">Условия договора</a>
         </label>
-        
-        <input type="checkbox" name="privacy" id="privacy" class="checkbox">
-        
-        <span class="check-icon"></span>
-
       </div>
 
       <button type="submit" class="form-buttom">Отправить</button>
