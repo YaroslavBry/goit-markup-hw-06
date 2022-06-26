@@ -301,36 +301,26 @@ img {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
 .modal {
   position: absolute;
-
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
   min-height: 581px;
   width: 528px;
 
   padding: 40px;
-  margin: 0;
+  /* margin: 0; */
   background-color: var(--white-text-color);
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(var(--cybic-parameters));
 }
-
-/* .close {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  top: 8px;
-  right: 8px;
-  border-radius: 50%;
-  background-color: var(--white-text-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-} */
 
 .close {
   position: absolute;
@@ -344,6 +334,11 @@ img {
   border-radius: 50%;
   background-color: var(--white-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: fill 250ms cubic-bezier(var(--cybic-parameters));
+}
+
+.close:hover {
+  fill: var(--accent-color);
 }
 
 /* ----------------BENEFITS---------------- */
@@ -932,7 +927,7 @@ img {
   border-radius: 4px;
   top: 0;
   fill: currentColor;
-  transition: border 250ms cubic-bezier(var(--cybic-parameters)), fill 250ms cubic-bezier(var(--cybic-parameters));
+  transition: border 250ms cubic-bezier(var(--cybic-parameters));
 }
 
 .form-input:hover,
@@ -1000,6 +995,10 @@ img {
   justify-content: center;
 }
 
+.label-link {
+  color: var(--accent-color);
+}
+
 /* ------------BEFORE----------- */
 .label::before {
   content: "";
@@ -1052,6 +1051,7 @@ img {
   top: 50%;
   left: 15px;
   transform: translateY(-50%);
+  transition: all 250ms cubic-bezier(var(--cybic-parameters));
 }
 
 .footer-form {
